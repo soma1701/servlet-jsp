@@ -8,8 +8,19 @@
 		#button{height:45px;color:white;width:80%}
 		</style>
 		<title>Login Page</title>
-	</head>>
+		<script type="text/javascript">
+		
+		function validateEmail() {
+			var email=document.getElementById("email").value;
+		    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    
+		    return re.test(email);
+		    
+		}
+		</script>
+	</head>
 	<body>
+	<form action="/test" name="signin" method="post" onsubmit="return validateEmail()">
 		<div class="div1">
 		<h1>Sign In.</h1><hr />
 			<div class="left" >
@@ -20,12 +31,13 @@
 			</div>
 			<div class="right">
 			<h3>Using your account</h3>
-			<input style="height:45px;width:80%;padding:5px" type="text" name="email" placeholder="Enter ur mail"><br>
+			<input id="email" style="height:45px;width:80%;padding:5px" type="text" name="email" placeholder="Enter ur mail"><br>
 			<input style="height:45px;width:80%;padding:5px" type="password" name="password" placeholder="Enter ur password"><br>
-			<br><button  style="background-color:rgba(79, 222, 222, 0.72)" id="button"><b>Sign In</b></button><br>
+			<br><button   style="background-color:rgba(79, 222, 222, 0.72)" id="button"><b>Sign In</b></button><br>
 			<br><a href="">Forgot ur password?</a>
 			</div>
 			</div>
 		</div>
+	</form>
 	</body>
 </html>
