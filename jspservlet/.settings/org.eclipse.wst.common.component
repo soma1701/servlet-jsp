@@ -2,6 +2,8 @@
     <wb-module deploy-name="jspservlet">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/.settings"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent"/>
         <property name="context-root" value="jspservlet"/>
         <property name="java-output-path" value="/jspservlet/build/classes"/>
     </wb-module>

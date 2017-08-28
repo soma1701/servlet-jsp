@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	</head> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,13 +10,13 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 		
 		<style>
-		.div1{width:700px;margin:0 auto;position:relative}
-		.left{width:50%; position:absolute;top:78%%;left:0px;margin:10px 10px 10px 10px}
-		.right{border-left:1px solid;text-align:center;width:50%; position:absolute;top:78%%;right:0px;margin:10px 10px 10px 10px}
-		#button{height:45px;color:white;width:80%}
-		#text{height:45px;width:80%;padding:5px}
+		  #facebook,#sign, #google, #email,#password{height:45px;color:white;width:80%}
+		  /* {height:45px;color:white;width:80%}
+		 {height:45px;color:white;width:80%}
+		 {height:45px;width:80%;padding:5px}
+		  {height:45px;width:80%;padding:5px} */
 		</style>
-		<title>Login Page</title>
+		<title>Signin page</title>
 		<script type="text/javascript">
 		
 		function validateEmail() {
@@ -40,25 +43,30 @@
 		</script>
 	</head>
 	<body>
-	<form action="/test" name="signin" method="post" onsubmit="return validateEmail()">
-		<div class="container div1">
-		<h1>Sign In.</h1><hr />
-		<div class="row">
-			<div class=" col-md-6 left" >
-				<h2>ues other account</h2>
-				<p >You can also sign in using facebook account and google account</p><br>
-				<button id="button" style="background-color:blue"> login using facebook</button><br>
-				<br><button id="button" type="button" class="btn" style="background-color:black"> login using google</button>
-			</div>
-			<div class=" col-md-6 right">
-			<h3>Using your account</h3>
+	<div class="container">
+  <h2>sign in</h2><hr>
+  <form action="signin" name="signin" method="get" onsubmit="return validateEmail()">
+  <div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <h2>ues other account</h2>
+				<p>You can also sign in using facebook account and google account</p><br>
+				<button id="facebook" class="btn"style="background-color:blue"> login using facebook</button><br>
+				<br><button id="google" type="button" class="btn" style="background-color:black"> login using google</button>
+    </div>
+    </div>
+    <div class="col-sm-6" style="border-left:1px solid">
+    <div class="form-group">
+      <h3>Using your account</h3>lass Authentication extends HttpServlet{
+	@
 			<input id="email" type="text" name="email" placeholder="Enter ur mail"><br>
 			<input id="password"  type="password" name="password" placeholder="Enter ur password"><br>
-			<br><button  id="button" style="background-color:rgba(79, 222, 222, 0.72)" ><b>Sign In</b></button><br>
+			<input type="hidden" value="LOGIN" name="ACTION_MODE">
+			<br><button  id="sign"class="btn" style="background-color:rgba(79, 222, 222, 0.72)" ><b>Sign In</b></button><br>
 			<br><a href="">Forgot ur password?</a>
-			</div>
-			</div>
-		</div>
-	</form>
+    </div>
+   </div>
+  </form>
+</div>
 	</body>
 </html>
